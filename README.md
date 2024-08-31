@@ -1,17 +1,38 @@
 # Patch-Wise Neighborhood Feature Distribution Modeling for Anomaly Detection in Locomotive Roof Inspections
 
-This repository contains the implementation of the **Patch-Wise Neighborhood Feature Distribution Modeling (PNFDM)** algorithm for anomaly detection in locomotive roof inspections, as described in our paper:
+This repository contains the description and dataset for the **Patch-Wise Neighborhood Feature Distribution Modeling (PNFDM)** algorithm for anomaly detection in locomotive roof inspections, as described in our paper:
 
 **[Patch-Wise Neighborhood Feature Distribution Modeling for Anomaly Detection in Locomotive Roof Inspections](https://github.com/zzfu-buaa/PNFDM)**
 
 ## Abstract
 
-Electric locomotives rely heavily on their roof power supply systems, which are susceptible to foreign objects due to the complex outdoor environments. Detecting these objects accurately and in a timely manner is crucial for ensuring train safety. Traditional methods face challenges such as the diverse and unpredictable nature of foreign objects, difficulty in obtaining abnormal samples, and inconsistencies in image quality.
+Electric locomotives rely heavily on their roof power supply systems, which are susceptible to foreign objects due to the complex outdoor environments. Detecting these objects accurately and in a timely manner is crucial for ensuring train safety. Traditional methods face challenges such as the diverse and unpredictable nature of foreign objects, difficulty in obtaining abnormal samples, and inconsistencies in image quality. To overcome these issues, we introduce the Patch-Wise Neighborhood Feature Distribution Modeling (PNFDM) algorithm. Experimental results demonstrate that our method significantly outperforms existing approaches on a locomotive roof anomaly dataset and generalizes effectively to the public MVTec AD dataset. The PNFDM algorithm allows for rapid model updates without needing abnormal samples, training on 100 samples in just 39.76 seconds.
 
-To overcome these issues, we introduce the Patch-Wise Neighborhood Feature Distribution Modeling (PNFDM) algorithm. This method models normal image features at the patch level using multiple multivariate Gaussian distributions and employs Mahalanobis distances to create an anomaly heatmap. Additionally, a patch-wise neighborhood feature sharing strategy enhances the signal-to-noise ratio of the anomaly heatmap.
+## Dataset
 
-To optimize storage and loading times, our approach utilizes a low-rank approximation via SVD decomposition, reducing model size by nearly 110 times and accelerating loading by 103 times. We also apply a chi-square distribution-based normalization to map Mahalanobis distances to a 0-1 range, aiding in threshold selection for anomaly localization.
+Currently, only the locomotive roof anomaly detection dataset is publicly available. The dataset can be downloaded from the following link:
 
-Experimental results demonstrate that our method significantly outperforms existing approaches on a locomotive roof anomaly dataset and generalizes effectively to the public MVTec AD dataset. The PNFDM algorithm allows for rapid model updates without needing abnormal samples, training on 100 samples in just 39.76 seconds.
+- [Dataset Download (Baidu Netdisk)](https://pan.baidu.com/s/1bzwh56EQWkKeYPufUTu7kg)(Extraction code：pij3）
 
-## Repository Contents
+After downloading, extract the dataset into the `data/` directory within this repository.
+
+## Current Status and Future Work
+
+The PNFDM code will be made available after the paper is accepted for publication. At this stage, we are providing the dataset and preliminary results to allow the community to explore the data and understand the challenges involved in locomotive roof anomaly detection.
+
+## Preliminary Results
+
+Our experiments show that the PNFDM algorithm achieves state-of-the-art performance on the locomotive roof anomaly dataset. Below is an example of the anomaly detection results:
+
+![Anomaly Detection Example](Figure%206.png "Anomaly Detection Example on Locomotive Roof")
+
+
+We will update this repository with the full codebase once the paper is officially published. Stay tuned for updates!
+
+## Citation
+
+If you find our dataset or preliminary results useful in your research, please cite our paper:
+
+## Contact
+
+For any questions or issues, please open an issue in this repository or contact us at [zzfu_mt@buaa.edu.cn].
