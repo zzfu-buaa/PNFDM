@@ -22,7 +22,7 @@ The PNFDM code will be made available after the paper is accepted for publicatio
 
 ## Preliminary Results
 
-Our experiments show that the PNFDM algorithm achieves state-of-the-art performance on the locomotive roof anomaly dataset. Additionally, we provide anomaly detection results on the MVTec AD dataset. Below are examples of the results for each dataset:
+Our experiments show that the PNFDM algorithm achieves state-of-the-art performance on the locomotive roof anomaly dataset. Additionally, the method is also applicable to the MVTec AD dataset. Below are examples of the results for each dataset:
 1. Locomotive Roof Anomaly Dataset:
 
 ![Locomotive Roof Anomaly Detection Example](Results/Roof_AD.png "Anomaly Detection Example on Locomotive Roof")
